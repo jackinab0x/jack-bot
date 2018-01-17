@@ -23,8 +23,6 @@ async def my_background_task():
             if(not temp==main):
                 await client.send_message(channel, ':alien:'+ '`New post from reddit-`'+'\n'+'**'+unidecode.unidecode(key1["title"]+'**'+'\n'+unidecode.unidecode(key1["link"])))
                 temp=main
-            else:
-                print("No new feed-")
         await asyncio.sleep(30) # task runs every 30 seconds
 
 @client.event
