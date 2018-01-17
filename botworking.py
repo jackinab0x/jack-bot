@@ -5,11 +5,11 @@ import unidecode
 from pypubg import core
 from time import sleep
 client = discord.Client()
-channel = discord.Object(id='353210240499449856')
+channel = discord.Object(id='')
 async def my_background_task():
     await client.wait_until_ready()
     counter = 0
-    channel = discord.Object(id='353210240499449856')
+    channel = discord.Object(id='')
     rss = 'https://www.reddit.com/r/funny/new/.rss?limit=1'
     temp=''
     feed = feedparser.parse(rss)
@@ -35,12 +35,5 @@ async def on_ready():
     print('------')
     await client.change_presence(game=discord.Game(name='Reddit feed'))
 @client.event
-async def on_message(message):
-    if message.content.startswith('!pubg'):
-        msg=message.content[6:]
-        for x in range(0,len(msg)):
-            if msg[x]==' ':
-                name=msg[:x]
-                region=msg[x+1:len(msg)]
 client.loop.create_task(my_background_task())
-client.run('MzU0NTQxNzAyNzQyMjc4MTQ0.DJlfoQ.0vc_UyGOhFG7GKwhYGRwXe_WGPk')
+client.run('')
